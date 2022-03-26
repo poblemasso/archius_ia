@@ -94,5 +94,5 @@ else:
                 'projecte': projecte
             }, ignore_index=True)
 finally:
-    dtlog[['usuari', 'data', 'codi', 'texte', 'projecte']].to_sql('datalog', con=sqlEngine, if_exists='append')
+    dtlog[['usuari', 'data', 'codi', 'texte', 'projecte']].to_sql('datalog', con=sqlEngine, if_exists='append', index=False)
 #Final infromant de com ha anat l'execucio a datalog 
